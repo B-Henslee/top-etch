@@ -54,8 +54,8 @@ button:active {
 }
 .color-screen{
     background-color: white;
-    height: 6in;
-    width: 6in;
+    height: 600px;
+    width: 600px;
     overflow: hidden;
 }
 .footer {
@@ -79,7 +79,7 @@ button:active {
     /* this applies the style to all children in the screen.
         This code makes it so each box is equal size in the screen. */
     flex: 0 0 calc(6.25%);
-    height: calc(6in / 16 ); 
+    height: calc(600px / 16 ); 
     background-color: white;
 }
 .div-screen > div.colored {
