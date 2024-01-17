@@ -5,6 +5,7 @@ divScreenContainer.classList.add('div-screen');
 // Append the container to the color-screen
 sketchDivs.appendChild(divScreenContainer);
 // Create 16x16 div elements and append them to the container
+
 for (let i = 0; i < 256; i++) {
     const createdDiv = document.createElement('div');
     divScreenContainer.appendChild(createdDiv);
@@ -36,6 +37,7 @@ function getColor(){
         }
     }
 }
+
 function getEraser(){
     const container = document.querySelector('.div-screen');
     let isMouseDown = false;
@@ -62,12 +64,24 @@ function getEraser(){
     }
 }
 
+function clearAll(){
+    const divs = document.querySelectorAll('.div-screen > div')
+    divs.forEach(div => {
+        div.classList.remove('colored');
+    })
+}
+
 const color = document.querySelector('#color');
-color.addEventListener('click', () => {
-    getColor();
-});
+    color.addEventListener('click', () => {
+        getColor();
+    });
 
 const erase = document.querySelector('#eraser');
-erase.addEventListener('click', () => {
-    getEraser();
-});
+    erase.addEventListener('click', () => {
+        getEraser();
+    });
+
+const clear = document.querySelector('#clear');
+    clear.addEventListener('click', () =>{
+        clearAll();
+    });
