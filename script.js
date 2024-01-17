@@ -13,9 +13,27 @@ for (let i = 0; i < 256; i++) {
     divScreenContainer.appendChild(createdDiv);
 }
 
-const divs = document.querySelectorAll('.div-screen > div')
-    divs.forEach(div => {
-        div.addEventListener('mouseenter', () => {
-            div.classList.add('colored');
-        })
-    })
+//logic for the "paintbrush" effect instead of just mouse over
+const container = document.querySelector('.div-screen');
+let isMouseDown = false;
+
+container.addEventListener('mousedown', (event) => {
+    isMouseDown = true;
+    paintDiv(event.target);
+});
+
+document.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+document.addEventListener('mousemove', (event) => {
+    if (isMouseDown === true) {
+        paintDiv(event.target);
+    }
+});
+
+function paintDiv(target) {
+    if (target.matches('.div-screen > div')) {
+        target.classList.add('colored');
+    }
+}
