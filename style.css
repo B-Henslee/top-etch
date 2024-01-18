@@ -73,7 +73,6 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex: 0 0 6.25%;
 }
 .div-screen > div {
     /* this applies the style to all children in the screen.
