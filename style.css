@@ -73,13 +73,12 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex: 0 0 6.25%
+    flex: 0 0 6.25%;
 }
 .div-screen > div {
     /* this applies the style to all children in the screen.
         This code makes it so each box is equal size in the screen. */
     flex: 0 0 calc(6.25%);
-    height: calc(600px / 16 ); 
     background-color: white;
 }
 .div-screen > div.colored {
