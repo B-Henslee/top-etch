@@ -1,1 +1,2 @@
 # top-etch
+This project was very needed. It gave me a lot of confidence messing around in DOM and more understanding. I felt like i didnt really understand what i was doing in rock paper scissors but this felt good and straight forward. I will probably come back and add a random color picker and possibly a color selector so its more like similar to paint than etch n sketch.
